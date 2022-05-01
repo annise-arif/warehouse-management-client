@@ -13,7 +13,7 @@ const Header = () => {
   }
   return (
     <header>
-      <Navbar collapseOnSelect expand="lg" bg="info" variant="dark">
+      <Navbar collapseOnSelect expand="lg" bg="black" variant="dark">
         <Container>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
@@ -26,9 +26,10 @@ const Header = () => {
               </Nav.Link>
             </Nav>
             <Nav>
-              {user && <>
-                <Nav.Link as={Link} to="/manageitems">
-                Manage Items
+            
+              {user && <> 
+              <Nav.Link as={Link} to="/manageitems">
+                Manage Item
               </Nav.Link>
               <Nav.Link as={Link} to="/additem">
                 Add Item
@@ -46,7 +47,7 @@ const Header = () => {
                   >
                     Sign Out
                   </button>
-                  <small>{user.email}</small>
+                  <small className="text-info">{user.email}</small>
                 </div>
                : 
                 <>

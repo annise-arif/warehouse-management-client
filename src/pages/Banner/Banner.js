@@ -3,7 +3,7 @@ import banner from '../../images/carousel3.jpg';
 const Banner = () => {
   return (
     <div>
-        <img src={banner} alt="" />
+        <img className='img-fluid' src={banner} alt="" />
     </div>
   );
 };
