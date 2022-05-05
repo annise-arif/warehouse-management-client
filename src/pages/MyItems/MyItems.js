@@ -37,16 +37,20 @@ const MyItems = () => {
     <div className="container">
       <h1 className="text-info py-5">My items</h1>
       <hr />
-        {service.map((s) => (
+       
+       {service.map((s) => (
           <div key={s._id}>
             <img className="w-25 py-4" src={s.img} alt="" />
             <h4>Name: {s.name}</h4>
-            <p>Price: {s.price}</p>
+            <p>Desc: {s.description}</p>
+            <p>Quantity: {s.quantity}</p>
+            <p>Price: ${s.price}</p>
             <h6>
               Delete Item <button onClick={() => handleDelete(s._id)}>X</button>
             </h6>
           </div>
         ))}
+       
       
     </div>
   );

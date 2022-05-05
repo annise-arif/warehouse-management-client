@@ -7,12 +7,12 @@ const AddItem = () => {
   const handleAddItem = (event) => {
     event.preventDefault();
     const name = event.target.name.value;
-    const desc = event.target.desc.value;
+    const description = event.target.desc.value;
     const quantity = event.target.quantity.value;
     const price = event.target.price.value;
     const img = event.target.imgUrl.value;
     const email = user.email;
-    const data = { name, price, quantity, img, desc, email };
+    const data = { name, price, quantity, img, description, email };
     // console.log(data)
     const url = `http://localhost:5000/service`;
     fetch(url, {

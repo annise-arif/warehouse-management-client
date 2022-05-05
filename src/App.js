@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import AddItem from "./pages/AddItem/AddItem";
 import Home from "./pages/Home/Home";
-import Inventory from "./pages/Inventory/Inventory";
+import Blogs from "./pages/Blogs/Blogs";
 import Login from "./pages/login/Login/Login";
 import Register from "./pages/login/Register/Register";
 import ManageItems from "./pages/ManageItems/ManageItems";
@@ -22,11 +22,9 @@ function App() {
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>
         <Route
-          path="/inventory"
+          path="/blogs"
           element={
-            <RequireAuth>
-              <Inventory></Inventory>
-            </RequireAuth>
+              <Blogs></Blogs>
           }
         ></Route>
         <Route
