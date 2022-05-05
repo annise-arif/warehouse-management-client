@@ -1,7 +1,7 @@
 import React from "react";
 import { Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import useService from "../../Hook/useServiices";
+import useService from "../../Hook/useServices";
 
 const ManageItems = () => {
   const [services, setServices] = useService([]);

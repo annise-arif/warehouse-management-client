@@ -8,10 +8,11 @@ const AddItem = () => {
     event.preventDefault();
     const name = event.target.name.value;
     const desc = event.target.desc.value;
+    const quantity = event.target.quantity.value;
     const price = event.target.price.value;
     const img = event.target.imgUrl.value;
     const email = user.email;
-    const data = { name, price, img, desc, email };
+    const data = { name, price, quantity, img, desc, email };
     // console.log(data)
     const url = `http://localhost:5000/service`;
     fetch(url, {
@@ -41,6 +42,14 @@ const AddItem = () => {
           name="desc"
           placeholder="Description"
           
+        />
+        <br />
+        <input
+          className="mb-3 mt-2 w-100"
+          type="number"
+          name="quantity"
+          placeholder="add quantity"
+          required
         />
         <br />
         <input
