@@ -17,7 +17,7 @@ const ManageService = () => {
     event.preventDefault();
     const newQuantity = event.target.updateValue.value;
     const quantity = parseInt(services.quantity) + parseInt(newQuantity);
-    console.log("new", quantity);
+    console.log("new quantity increase", quantity);
 
     const url = `http://localhost:5000/service/${id}`;
     fetch(url, {
@@ -38,7 +38,7 @@ const ManageService = () => {
   const handleDelevered = (id) =>{
     const newQuantity = parseInt(services.quantity) -1;
     const quantity = newQuantity;
-    console.log("new", quantity);
+    console.log("new quantity decrease", quantity);
 
     fetch(`http://localhost:5000/delivered/${id}`, {
       method: 'PUT',
