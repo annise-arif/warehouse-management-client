@@ -1,4 +1,6 @@
 import React from "react";
+import { Nav } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import useService from "../../Hook/useServiices";
 
 const ManageItems = () => {
@@ -13,17 +15,22 @@ const ManageItems = () => {
         })
         .then(res => res.json())
         .then(data => {
+            
             const remaining = services.filter(s => s._id !== id);
             setServices(remaining);
         })
     }
   }
   return (
-    <div className="container ">
-      <h1 className="mx-auto text-info py-4">Manage All Items:</h1>
-      <div className="d-flex flex-wrap">
+    <div className="container">
+      <h1 className="mx-auto text-info py-4">Manage All Items</h1>
+      <Nav.Link as={Link} to="/additem">
+      <button className="btn btn-info text-white">    Add New Item </button>
+              </Nav.Link>
+      <div className="ms-5">
+      <div className="d-flex flex-wrap mx-auto ms-5 ps-5">
       {services.map((service) => (
-        <div key={service._id} className=" w-25 m-4 ">
+        <div key={service._id} className=" w-25 m-4">
           <div className="service">
             <img src={service.img} className="w-100 rounded-3" alt="img" />
             <h2 className="pt-4">{service.name}</h2>
@@ -43,6 +50,7 @@ const ManageItems = () => {
           </div>
         </div>
       ))}
+      </div>
       </div>
     </div>
   );
