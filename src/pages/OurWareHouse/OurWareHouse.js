@@ -1,5 +1,6 @@
 import React from "react";
 import { Card } from "react-bootstrap";
+import "./OurWareHouse.css"
 
 const OurWareHouse = () => {
   return (
@@ -17,7 +18,7 @@ const OurWareHouse = () => {
         </div>
         <div className="col-12 col-lg-6 ps-5">
           <h3 className="text-secondary py-4">Warehouse Management</h3>
-          <p>
+          <p className="container-fluid">
             The Warehouse Management System or WMS comes with a number of
             features that are meant to offer assistance with the administration
             of workflow-based internal, inbound and outbound warehouse
@@ -31,7 +32,7 @@ const OurWareHouse = () => {
               <p><b>Name:</b> Eng: Alamin Khan</p>
               <img
                 className="rounded-circle w-50 ms-2"
-                src="https://i.ibb.co/850D4Yh/owner.jpg"
+                src="https://i.ibb.co/Zzjs8bp/owner.jpg"
                 alt=""
               />
              
@@ -49,7 +50,7 @@ const OurWareHouse = () => {
         </div>
       </div>
     </div>
-
+  {/* another extra section */}
     <Card className="bg-dark text-light mt-4 rounded-0">
         <Card.Img
           className="w-100"
@@ -58,7 +59,7 @@ const OurWareHouse = () => {
         />
         <Card.ImgOverlay className="mt-lg-5">
           <Card.Title className="mt-lg-3 text-info">Our Ware House Introduction </Card.Title>
-          <Card.Text className="mt-lg-4">
+          <Card.Text className="mt-lg-4 card-text">
             Warehouses play an important role for the companies in Thailand
             automotive industry, which is one of the major sources of country’s
             GDP [1]. This research designs the warehouse layout for a raw

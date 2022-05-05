@@ -23,29 +23,28 @@ const AddItem = () => {
     })
       .then((res) => res.json())
       .then((result) => {
-         console.log(result);
          alert('Item Added successfull');
          event.target.reset();
       });
   };
   return (
-    <div>
+    <div className="w-25 mx-auto">
       <h1 className="py-3 text-info">Add a item</h1>
       <form onSubmit={handleAddItem}>
-        <input type="text" name="name" placeholder="Item Name" required />
+        <input className="w-100" type="text" name="name" placeholder="Item Name" required />
         <br />
         <textarea
           cols="23"
           rows="2"
-          className="mt-2"
+          className="mt-3 w-100"
           type="text"
           name="desc"
           placeholder="Description"
-          required
+          
         />
         <br />
         <input
-          className="my-2"
+          className="mb-3 mt-2 w-100"
           type="number"
           name="price"
           placeholder="add price"
@@ -53,7 +52,7 @@ const AddItem = () => {
         />
         <br />
         <input
-          className="mb-3"
+          className="mb-3 w-100"
           type="text"
           name="imgUrl"
           placeholder="Img Url"
@@ -61,11 +60,12 @@ const AddItem = () => {
         />
         <br />
         <input
-          className="btn btn-info text-light"
+          className="btn btn-info text-light w-50"
           type="submit"
           value="Add Item"
         />
       </form>
+      
     </div>
   );
 };
