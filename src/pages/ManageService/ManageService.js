@@ -90,13 +90,13 @@ const ManageService = () => {
         </button>
         <form onSubmit={updateQuantity} className="mt-4">
           <input
-            className="me-2 p-1"
+            className="me-2 p-1 pb-2"
             type="number"
             name="updateValue"
             required
             id=""
           />
-          <input className="btn btn-info" type="submit" value="Add" />
+          <input className="btn btn-info" type="submit" value="Add Quantity" />
         </form>
       </div>
     </div>
