@@ -1,0 +1,18 @@
+/* footer starts  */
+footer{
+    padding: 1% 10%;
+    background: #0f1313;
+}
+
+footer a {
+    color: rgb(179, 170, 170);
+    margin: 0 10px;
+    text-decoration: none;
+}
+footer a:hover{
+    color: rgb(114, 221, 203);
+}
+#facebook{
+    color: rgb(66, 201, 235);
+}
+/* footer ends */
