@@ -4,11 +4,11 @@ Assignment Project
 
 # Live Web Site Link
 
-Live Site: 
+Live Site: https://warehouse-of-car.firebaseapp.com/myitems
  
 # Server Site Code Link
 
-Server Site Code:  
+Server Site Code: https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-annise-arif 
 
 ### Description
 
