@@ -6,7 +6,7 @@ import auth from "../../../firebase-init";
 import Loading from "../../share/Loading/Loading";
 import SocialLogin from "../../SocialLogin/SocialLogin";
 import { useSendPasswordResetEmail } from "react-firebase-hooks/auth";
-import axios from "axios";
+
 
 const Login = () => {
   const emailRef = useRef("");
@@ -31,7 +31,7 @@ const Login = () => {
   }
 
   if (user) {
-    // navigate(from, { replace: true });
+    navigate(from, { replace: true });
   }
 
   const handleLoginForm = async(event) => {
@@ -41,9 +41,9 @@ const Login = () => {
     if (email && password) {
      await signInWithEmailAndPassword(email, password);
      
-     const {data} = await axios.post('https://quiet-taiga-62097.herokuapp.com/login', {email});
-     localStorage.setItem('accessToken', data.accessToken);
-     navigate(from, { replace: true });
+    //  const {data} = await axios.post('https://quiet-taiga-62097.herokuapp.com/login', {email});
+    //  localStorage.setItem('accessToken', data.accessToken);
+    //  navigate(from, { replace: true });
      
     }
   };

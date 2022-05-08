@@ -10,11 +10,7 @@ const MyItems = () => {
     const getService = async () => {
       const email = user?.email;
       const url = `https://quiet-taiga-62097.herokuapp.com/serviceByEmail/${email}`;
-      const { data } = await axios.get(url, {
-        headers: {
-          authorization: `Bearer ${localStorage.getItem('accessToken')}`
-        }
-      });
+      const { data } = await axios.get(url);
       setService(data);
     };
     getService();
