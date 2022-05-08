@@ -40,8 +40,11 @@ const Login = () => {
     const password = passwordRef.current.value;
     if (email && password) {
      await signInWithEmailAndPassword(email, password);
+     
      const {data} = await axios.post('https://quiet-taiga-62097.herokuapp.com/login', {email});
-     console.log(data);
+     localStorage.setItem('accessToken', data.accessToken);
+     navigate(from, { replace: true });
+     
     }
   };
   const navigateRegister = () => {
