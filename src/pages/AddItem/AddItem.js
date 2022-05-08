@@ -14,7 +14,7 @@ const AddItem = () => {
     const email = user.email;
     const data = { name, price, quantity, img, description, email };
     // console.log(data)
-    const url = `http://localhost:5000/service`;
+    const url = `https://quiet-taiga-62097.herokuapp.com/service`;
     fetch(url, {
       method: "POST",
       headers: {
@@ -24,15 +24,21 @@ const AddItem = () => {
     })
       .then((res) => res.json())
       .then((result) => {
-         alert('Item Added successfull');
-         event.target.reset();
+        alert("Item Added successfull");
+        event.target.reset();
       });
   };
   return (
     <div className="w-25 mx-auto">
       <h1 className="py-3 text-info">Add a item</h1>
       <form onSubmit={handleAddItem}>
-        <input className="w-100" type="text" name="name" placeholder="Item Name" required />
+        <input
+          className="w-100"
+          type="text"
+          name="name"
+          placeholder="Item Name"
+          required
+        />
         <br />
         <textarea
           cols="23"
@@ -41,7 +47,6 @@ const AddItem = () => {
           type="text"
           name="desc"
           placeholder="Description"
-          
         />
         <br />
         <input
@@ -74,7 +79,6 @@ const AddItem = () => {
           value="Add Item"
         />
       </form>
-      
     </div>
   );
 };

@@ -11,7 +11,7 @@ const Footer = () => {
                     <p className="small mb-0 mt-1 ">Copy Right &copy; MD: Arif hasan {currentyear}</p>
                 </div>
                 <div className="col-lg-6 text-center text-lg-right">
-                    <a href="/">Home</a>
+                    <a href="/#">Home</a>
                     <a href="/#"><i id='facebook' className="fab fa-facebook text-light"></i></a>
                     <a href="/#"><i className="fab fa-youtube"></i></a>
                     <a href="/#"><i className="fab fa-instagram"></i></a>

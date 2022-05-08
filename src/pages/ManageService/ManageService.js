@@ -9,7 +9,7 @@ const ManageService = () => {
   const { img, name, description, price, supplier } = services;
 
   useEffect(() => {
-    const url = `http://localhost:5000/service/${id}`;
+    const url = `https://quiet-taiga-62097.herokuapp.com/service/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((res) => setServices(res));
@@ -18,15 +18,14 @@ const ManageService = () => {
   const updateQuantity = (event) => {
     event.preventDefault();
     const newQuantity = event.target.updateValue.value;
-    if(newQuantity <= 0){
-       window.alert("Please Enter a Positive Number To Add Quantity")
-    }
-    else if (newQuantity >= 1) {
+    if (newQuantity <= 0) {
+      window.alert("Please Enter a Positive Number To Add Quantity");
+    } else if (newQuantity >= 1) {
       const quantity = parseInt(services.quantity) + parseInt(newQuantity);
       console.log("new quantity increase", quantity);
       const allQuantity = { img, name, description, quantity, price, supplier };
 
-      const url = `http://localhost:5000/service/${id}`;
+      const url = `https://quiet-taiga-62097.herokuapp.com/service/${id}`;
       fetch(url, {
         method: "PUT",
         headers: {
@@ -47,21 +46,21 @@ const ManageService = () => {
     const newQuantity = parseInt(services.quantity) - 1;
     const quantity = newQuantity;
     console.log("new quantity decrease", quantity);
-    if(quantity !== services.quantity){
+    if (quantity !== services.quantity) {
       const Quantity = { img, name, description, quantity, price, supplier };
-    
-    fetch(`http://localhost:5000/delivered/${id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify({ quantity }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        setServices(Quantity);
-        console.log("success", data);
-      });
+
+      fetch(`https://quiet-taiga-62097.herokuapp.com/delivered/${id}`, {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify({ quantity }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          setServices(Quantity);
+          console.log("success", data);
+        });
     }
   };
   return (
@@ -82,10 +81,7 @@ const ManageService = () => {
             <small>Supplier: {supplier}</small>
           </p>
         </div>
-        <button
-          onClick={handleDelivered}
-          className="btn btn-info"
-        >
+        <button onClick={handleDelivered} className="btn btn-info">
           Delevered
         </button>
         <form onSubmit={updateQuantity} className="mt-4">

@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
-import "./Services.css";
 import Service from "./Service/Service";
-
+import "./Services.css";
 
 const Services = () => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/service")
+    fetch("https://quiet-taiga-62097.herokuapp.com/service")
       .then((res) => res.json())
       .then((res) => setServices(res));
   }, []);
