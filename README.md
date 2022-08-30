@@ -4,7 +4,7 @@ Assignment Project
 
 # Live Web Site Link
 
-Live Site: https://warehouse-of-car.firebaseapp.com/myitems
+Live Site: https://warehouse-of-car.firebaseapp.com/
  
 # Server Site Code Link
 
